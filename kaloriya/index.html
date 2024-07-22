@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расчет рациона питания</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Расчет рациона питания</h1>
+        <form id="nutritionForm">
+            <fieldset>
+                <legend>Основные данные</legend>
+                <label for="gender">Пол:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Мужчина</option>
+                    <option value="female">Женщина</option>
+                </select>
+
+                <label for="height">Рост (см):</label>
+                <input type="number" id="height" name="height" required>
+
+                <label for="weight">Вес (кг):</label>
+                <input type="number" id="weight" name="weight" required>
+
+                <label for="age">Возраст (годы):</label>
+                <input type="number" id="age" name="age" required>
+
+                <label for="goal">Цель:</label>
+                <select id="goal" name="goal" required>
+                    <option value="lose">Похудение</option>
+                    <option value="maintain">Поддержание веса</option>
+                    <option value="gain">Набор массы</option>
+                </select>
+
+                <label for="workouts">Количество тренировок в неделю:</label>
+                <select id="workouts" name="workouts" required>
+                    <option value="0">0</option>
+                    <option value="1-2">1-2</option>
+                    <option value="3-4">3-4</option>
+                    <option value="5-6">5-6</option>
+                    <option value="7">Ежедневно</option>
+                </select>
+
+                <label for="fitnessLevel">Уровень физической подготовки:</label>
+                <select id="fitnessLevel" name="fitnessLevel" required>
+                    <option value="beginner">Начальный</option>
+                    <option value="intermediate">Средний</option>
+                    <option value="advanced">Продвинутый</option>
+                </select>
+
+                <label for="activityLevel">Уровень активности:</label>
+                <select id="activityLevel" name="activityLevel" required>
+                    <option value="sedentary">Сидячий</option>
+                    <option value="lightlyActive">Малоподвижный</option>
+                    <option value="moderatelyActive">Умеренный</option>
+                    <option value="veryActive">Активный</option>
+                    <option value="superActive">Очень активный</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Предпочтения в еде</legend>
+                <label>Какие крупы/гарниры вы едите?</label>
+                <input type="checkbox" name="grains" value="Гречка"> Гречка<br>
+                <input type="checkbox" name="grains" value="Рис белый"> Рис белый<br>
+                <input type="checkbox" name="grains" value="Овсянка"> Овсянка<br>
+                <input type="checkbox" name="grains" value="Пшенка"> Пшенка<br>
+
+                <label>Какие мучные изделия вы едите?</label>
+                <input type="checkbox" name="bread" value="Цельнозерновой хлеб"> Цельнозерновой хлеб<br>
+                <input type="checkbox" name="bread" value="Хлебцы"> Хлебцы (ржаные; мультизлаковые и т.п.)<br>
+                <input type="checkbox" name="bread" value="Хлеб ржаной/черный"> Хлеб ржаной/черный<br>
+                <input type="checkbox" name="bread" value="Лаваш бездрожжевой"> Лаваш бездрожжевой<br>
+
+                <label>Что из списка ниже есть в вашем рационе (мясо, птица)?</label>
+                <input type="checkbox" name="meat" value="Куриная грудка"> Куриная грудка<br>
+                <input type="checkbox" name="meat" value="Куриное бедро"> Куриное бедро<br>
+                <input type="checkbox" name="meat" value="Куриная голень"> Куриная голень<br>
+                <input type="checkbox" name="meat" value="Фарш из филе курицы"> Фарш из филе курицы<br>
+
+                <label>Какие бобовые вы едите?</label>
+                <input type="checkbox" name="legumes" value="Кукуруза"> Кукуруза<br>
+                <input type="checkbox" name="legumes" value="Горошек"> Горошек<br>
+                <input type="checkbox" name="legumes" value="Фасоль"> Фасоль<br>
+
+                <label>Что из списка ниже есть в вашем рационе (рыба, морепродукты)?</label>
+                <input type="checkbox" name="fish" value="Тилапия"> Тилапия<br>
+                <input type="checkbox" name="fish" value="Судак"> Судак<br>
+                <input type="checkbox" name="fish" value="Дорадо"> Дорадо<br>
+                <input type="checkbox" name="fish" value="Карп"> Карп<br>
+
+                <label>Какую молочку и кисломолочку вы едите?</label>
+                <input type="checkbox" name="dairy" value="Молоко"> Молоко<br>
+                <input type="checkbox" name="dairy" value="Молоко обезж."> Молоко обезж.<br>
+                <input type="checkbox" name="dairy" value="Молоко без лакт."> Молоко без лакт.<br>
+                <input type="checkbox" name="dairy" value="Молоко растительное"> Молоко растительное<br>
+
+                <label>Едите ли вы яйца?</label>
+                <input type="checkbox" name="eggs" value="Белок"> Белок<br>
+                <input type="checkbox" name="eggs" value="Желток"> Желток<br>
+
+                <label>Какие овощи вы едите? (учитывайте сезонность)</label>
+                <input type="checkbox" name="vegetables" value="Помидоры"> Помидоры<br>
+                <input type="checkbox" name="vegetables" value="Огурцы"> Огурцы<br>
+                <input type="checkbox" name="vegetables" value="Перец сладкий"> Перец сладкий<br>
+                <input type="checkbox" name="vegetables" value="Лук репчатый"> Лук репчатый<br>
+
+                <label>Какие фрукты вы едите? (учитывайте сезонность)</label>
+                <input type="checkbox" name="fruits" value="Яблоко"> Яблоко<br>
+                <input type="checkbox" name="fruits" value="Груша"> Груша<br>
+                <input type="checkbox" name="fruits" value="Банан"> Банан<br>
+                <input type="checkbox" name="fruits" value="Мандарин"> Мандарин<br>
+            </fieldset>
+            <button type="submit">Рассчитать</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
